@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Notification List</string>
+    <string name="imageView_contentDescription_images">images</string>
+    <string name="textView_hint_testing">Testing</string>
+    <string name="activity_second_button_text_sendNotification">Send Notification</string>
+</resources>

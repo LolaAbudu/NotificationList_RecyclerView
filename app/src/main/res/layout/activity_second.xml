@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_second_backgroundColor"
+    tools:context=".SecondActivity">
+
+    <ImageView
+        android:id="@+id/photo_imageView_secondActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_second_imageView_layout_marginTop"
+        android:contentDescription="@string/imageView_contentDescription_images"
+        android:paddingTop="@dimen/activity_second_imageView_paddingTop"
+        app:layout_constraintBottom_toTopOf="@id/photo_imageView_secondActivity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:src="@drawable/ic_airplanemode" />
+
+    <TextView
+        android:id="@+id/description_textView_secondActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_second_textView_layout_marginTop"
+        android:hint="@string/textView_hint_testing"
+        android:textSize="@dimen/activity_second_textView_textSize"
+        app:layout_constraintBottom_toTopOf="@id/notification_button_secondActivity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photo_imageView_secondActivity" />
+
+    <Button
+        android:id="@+id/notification_button_secondActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_second_button_text_sendNotification"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photo_imageView_secondActivity" />
+</android.support.constraint.ConstraintLayout>

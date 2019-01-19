@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_second_textView_textSize">32sp</dimen>
+    <dimen name="activity_second_textView_layout_marginTop">40dp</dimen>
+    <dimen name="activity_second_imageView_layout_marginTop">24dp</dimen>
+    <dimen name="activity_second_imageView_paddingTop">160dp</dimen>
+    <dimen name="notification_itemview_imageView_layout_marginTop">40dp</dimen>
+    <dimen name="notification_itemview_margins">24dp</dimen>
+    <dimen name="notification_itemview_textView_textSize">24sp</dimen>
+    <dimen name="activity_main_recyclerView_layout_height_and_weight">0dp</dimen>
+</resources>
