@@ -53,7 +53,7 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (sharedPreferences.contains(textView.getText().toString())) {
-                    Toast.makeText(getApplicationContext(), "This notification has already been sent and will not be sent again", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Notification: '" + textView.getText() + "' has already been sent!", Toast.LENGTH_SHORT).show();
                 } else {
                     sendNotification();
                 }

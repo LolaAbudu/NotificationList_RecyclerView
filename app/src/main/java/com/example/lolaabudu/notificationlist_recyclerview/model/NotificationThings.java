@@ -8,7 +8,13 @@ public class NotificationThings implements Parcelable {
 
     private int item;
     private String description;
+    //private @DrawableRes int drawable;  -- use instead of above int item, to send the drawable pic from one class to another
+    //Look inside HW0302NotificationList-- Rusi homework sample
 
+
+    //@NonNull final String message  -- add @NonNull so that the user cant pass in a empty string
+    //@DrawableRes final int drawable -- use that as the second parameter
+    //
     public NotificationThings(int item, String description) {
         this.item = item;
         this.description = description;
