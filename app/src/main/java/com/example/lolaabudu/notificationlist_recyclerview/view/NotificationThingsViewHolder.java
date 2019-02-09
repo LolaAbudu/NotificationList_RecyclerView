@@ -13,22 +13,22 @@ import com.example.lolaabudu.notificationlist_recyclerview.model.NotificationThi
 
 public class NotificationThingsViewHolder extends RecyclerView.ViewHolder {
 
-    private TextView description;
-    private ImageView item;
+    // be more specific with your naming.
+    private TextView descriptionTextView;
+    private ImageView itemImageView;
     private Intent intent;
     private NotificationThings allThings;
-    private static final String TAG = "image_call";
 
     public NotificationThingsViewHolder(@NonNull View itemView) {
         super(itemView);
-        description = itemView.findViewById(R.id.description_textView);
-        item = itemView.findViewById(R.id.photo_imageView);
+        descriptionTextView = itemView.findViewById(R.id.description_textView);
+        itemImageView = itemView.findViewById(R.id.photo_imageView);
     }
 
     public void onBind(NotificationThings allNotification) {
         this.allThings = allNotification;
-        item.setImageResource(allNotification.getItem());
-        description.setText(allNotification.getDescription());
+        itemImageView.setImageResource(allNotification.getItem());
+        descriptionTextView.setText(allNotification.getDescription());
         itemView.setOnClickListener(new View.OnClickListener() {
 
             @Override
