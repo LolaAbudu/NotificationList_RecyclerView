@@ -44,10 +44,7 @@ public class SecondActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
 
         textView.setText(notificationThings.getDescription());
-        Log.d("inView", "text: " + notificationThings.getDescription());
-
         imageView.setImageDrawable(getResources().getDrawable(notificationThings.getItem()));
-        Log.d("inView", "image: " + notificationThings.getItem());
 
         notificationButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +76,7 @@ public class SecondActivity extends AppCompatActivity {
         PendingIntent notificationPendingIntent = PendingIntent.getActivity(this,
                 NOTIFICATION_ID, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-        NotificationCompat.Builder notifyBuilder = new NotificationCompat.Builder(this, PRIMARY_CHANNEL_ID)
+        return new NotificationCompat.Builder(this, PRIMARY_CHANNEL_ID)
                 .setContentTitle("Notification Things notification.")
                 .setContentText("Click Me!")
                 .setSmallIcon(R.drawable.ic_action_airplane)
@@ -87,7 +84,6 @@ public class SecondActivity extends AppCompatActivity {
                 .setAutoCancel(true)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setDefaults(NotificationCompat.DEFAULT_ALL);
-        return notifyBuilder;
     }
 
     private void createNotificationChannel() {

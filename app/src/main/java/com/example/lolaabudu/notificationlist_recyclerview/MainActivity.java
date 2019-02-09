@@ -25,6 +25,17 @@ public class MainActivity extends AppCompatActivity {
 
         notificationThingsView = findViewById(R.id.notification_list_recyclerView);
 
+        List<NotificationThings> notificationItems = createList();
+
+        NotificationThingsAdapter notificationThingsAdapter = new NotificationThingsAdapter(notificationItems);
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
+        notificationThingsView.setAdapter(notificationThingsAdapter);
+        notificationThingsView.setLayoutManager(linearLayoutManager);
+    }
+
+    //things like this should be extracted to a method to help clean up the code
+    private List<NotificationThings> createList() {
         List<NotificationThings> notificationItems = new ArrayList<>();
 
         notificationItems.add(new NotificationThings(R.drawable.ic_airplanemode, "This is an airplane"));
@@ -48,11 +59,7 @@ public class MainActivity extends AppCompatActivity {
         notificationItems.add(new NotificationThings(R.drawable.ic_zoom_in, "This is a zoom-in"));
         notificationItems.add(new NotificationThings(R.drawable.ic_zoom_out, "This is a zoom-out"));
 
-        NotificationThingsAdapter notificationThingsAdapter = new NotificationThingsAdapter(notificationItems);
-
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
-        notificationThingsView.setAdapter(notificationThingsAdapter);
-        notificationThingsView.setLayoutManager(linearLayoutManager);
+        return notificationItems;
     }
 }
 
